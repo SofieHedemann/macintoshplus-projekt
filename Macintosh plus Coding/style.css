@@ -9,34 +9,86 @@
         background-size:cover; /*Makes the background image fit to the whole screen*/
     }
 
+    .navigation {
+        display: flex;
+        justify-content: center;
+        }
+
+    .navigation a {
+    text-decoration: none;
+    color: white;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        gap: 1rem;
+        padding: 0;
+    }
+
     .footer {
         display: flex;
         justify-content: center;
         gap: 1rem;
+        margin-top: 1rem;
     }
     .footer p {
         margin: 0;
         font-size: 1rem;
+        color: white;
     }
 
     .footer a {
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
     .aboutband {
+        background-color: #bf5c9f;
+        border-radius: 12px;
         display: flex;
         color: white;
         flex-direction: column;
         align-items: center;
     }
 
-    .aboutband img {
+    .aboutband p {
+        text-align: center;
+        padding: 0 1rem;
+        margin-top: .5rem;
+    }
 
+    .aboutband h1 {
+        margin-top: .5rem;
+        margin-bottom: .3rem;
+    }
+
+    .aboutband img {
+        padding-bottom: .5rem;
         max-width: 100vh;
         width: 25vh;
         max-height: 100vh;
         height: 25vh;
+    }
+
+    .banner {
+        margin-top: .5rem;
+        background-color: #8A97A7;
+        border-radius: 12px;
+        align-items: center;
+        
+    }
+
+    .banner img {
+        border-radius: 12px;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 
 }
