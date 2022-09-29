@@ -8,14 +8,38 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <nav class="navigation">
-        <ul class="nav-list">
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="Discography.html">Discography</a></li>
-            <li><a href="Merch.html">Merch</a></li>
-        </ul>
-    </nav>
+
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox"/>
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Info</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+          </ul>
+        </div>
+      </nav>
 
 <article class="aboutband">
     <h1>Om Bandet</h1>
@@ -32,6 +56,30 @@
 
 <section class="socials">
 <img src="img/albumcover.png" alt="">
+
+<article class="socials bandcamp">
+<a href="https://vektroid.bandcamp.com/">
+<img src="img/BandCampLogogreen.png" alt="">
+</a>
+</article>
+
+<article class="socials twitter">
+<a href="https://twitter.com/vektroid">
+    <img src="img/TwitterNews.png" alt="">
+</a>
+</article>
+
+<article class="socials rara">
+<a href="https://twitter.com/vektroidlive">
+    <img src="img/TwitterRara.png" alt="">
+</a>
+</article>
+
+<article class="socials twitch">
+    <a href="https://www.twitch.tv/vektroidlive">
+    <img src="img/twitch.png" alt="">    
+    </a>
+    </article>
 
 </section>
 
