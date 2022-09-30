@@ -8,21 +8,93 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="Discography.html">Discography</a></li>
-            <li><a href="Merch.html">Merch</a></li>
-        </ul>
-    </nav>
 
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox"/>
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="index.html"><li>Home</li></a>
+            <a href="Discography.html"><li>Discography</li></a>
+            <a href="Merch.html"><li>Merch</li></a>
+          </ul>
+        </div>
+      </nav>
 
+<section>
+<h1>Discography</h1>
 
+<section class="albums">
+    <figure>
+    <img src="img/discography/macintoshplusalbum.jpeg" alt="">
+    <figcaption>Floral Shoppe</figcaption>
+</figure>
+<figure>
+    <img src="img/discography/yellowdisc.jpeg" alt="">
+    <figcaption>Sick & Panic</figcaption>
+</figure>
 
-    <footer class="footer">
-        <p>Vektroid</p>
-        <a href="https://vektroid.bandcamp.com">Bandcamp</a>
-    </footer>
+    <figure>
+    <img src="img/discography/rectangel.jpeg" alt="">
+    <figcaption>Capitose Windowpane</figcaption>
+</figure>
+<figure>
+    <img src="/img/discography/circles.jpeg" alt="">
+    <figcaption>Color Ocean Road</figcaption>
+</figure>
+
+<figure>
+    <img src="img/discography/ise.jpeg" alt="">
+    <figcaption>isÆ</figcaption>
+</figure>
+<figure>
+    <img src="img/discography/squares.jpeg" alt="">
+    <figcaption>Telnet Complete</figcaption>
+</figure>
+
+    <figure>
+    <img src="img/discography/halfstatue.jpeg" alt="">
+    <figcaption>Seed & Synthetic Earth</figcaption>
+</figure>
+<figure>
+    <img src="img/discography/purpledots.jpeg" alt="">
+    <figcaption>GDGA1</figcaption>
+</figure>
+
+    <figure>
+    <img src="img/discography/oldwindows.jpeg" alt="">
+    <figcaption>Neo Cali</figcaption>
+</figure>
+<figure>
+    <img src="img/discography/gridvolume2.jpeg" alt="">
+    <figcaption>Fuji Grid TV II: EMX</figcaption>
+</figure>
+
+</section>
+
+</section>
+
+<footer class="footer">
+    <p>Vektroid</p>
+    <a href="https://vektroid.bandcamp.com" target="_blank">Bandcamp</a>
+</footer>
 </body>
 </html>
