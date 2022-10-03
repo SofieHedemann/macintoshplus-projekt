@@ -415,7 +415,48 @@ main {
   "feed selfie banner banner";
 }
 
+.feed-bandcamp p {
+  text-align: center;
+}
 
+.feed-tweet {
+  background-color: #1DA1F2;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.feed-tweet p {
+margin-bottom: .5rem;
+text-align: center;
+}
+
+.twitchlink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.twitchlink p {
+  margin-bottom: 0;
+}
+
+.twitchlink img {
+  margin: auto;
+  width: 40%;
+  height: 40%;
+  margin-bottom: .5rem;
+}
+
+.twitchlink a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #9147FF;
+  background-color: #9147FF;
+  width: 25%;
+  border-radius: 12px;
+  margin: auto;
+}
 
   .feed {
     visibility: visible;
