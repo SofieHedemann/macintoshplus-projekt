@@ -1,21 +1,22 @@
-/* - - - MOBILE - - - */
-@media screen and (min-width: 390px) {
-    body {
-        max-width: 100%;
-        margin: 1rem;
-        background-image: url(/img/front.gif);
-        color: white;
-        background-repeat: no-repeat; /*makes it not repeat itself*/
-        background-attachment: fixed; /*covers the whole screen and locks itself in place*/
-        background-size:cover; /*Makes the background image fit to the whole screen*/
-    }
+body {
+  max-width: 100%;
+  margin: 1rem;
+  background-image: url(/img/front.gif);
+  color: white;
+  background-repeat: no-repeat; /*makes it not repeat itself*/
+  background-attachment: fixed; /*covers the whole screen and locks itself in place*/
+  background-size:cover; /*Makes the background image fit to the whole screen*/
+}
 
-    img {
-      max-width: 100%;
-    }
+img {
+max-width: 100%;
+}
+
+/* - - - MOBILE - - - */
+@media screen and (min-width: 390px) and (max-device-width: 789px) {
 
 /* - - -- - - - - -- - - -- --  NAVIGATION - - - -- - - -- - - - -*/
-    #menuToggle
+#menuToggle
 {
   display: block;
   position: relative;
@@ -161,6 +162,11 @@
 
 /* - - - - - - - FORSIDE - - - - - - - -*/ 
 
+  .mobile-hide {
+    display:none;
+  } 
+
+
     .aboutband {
         margin-top: 1.5rem;
         background-color: #bf5c9f;
@@ -189,11 +195,18 @@
         height: 25vh;
     }
 
+    .mobile-vek {
+      display: flex;
+      flex-direction: column-reverse;
+      background-color: #DCFF4D;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
     .banner {
         margin-top: 1rem;
-        background-color: #DCFF4D;
-        border-radius: 12px;
-        align-items: center;        
+        align-items: center;    
+        justify-content: center;    
     }
 
     .banner img {
@@ -209,6 +222,14 @@
 
     .selfie {
         padding-bottom: .5rem;
+    }
+
+    .selfie img {
+      display: block;
+      padding-top: .5rem;
+      margin: auto;
+      max-width: 95%;
+      border-radius: 12px;
     }
 
     .albumcover {
@@ -350,8 +371,87 @@
 
 }
 
-/* - - - TABLET - - - */
-@media screen and (min-width: 620px) {
+/* - - - COMPUTER - - - */
+@media screen and (min-width: 790px) {
+
+  /* - - - - Forside - - - - */
+
+  
+/* Hidden Objects*/
+.albumcover {
+  visibility: hidden;
+}
+.someh1{
+  visibility: hidden;
+}
+.socials{
+  visibility: hidden;
+}
+.rara{
+  visibility: hidden;
+}
+.twitter{
+  visibility: hidden;
+}
+.bandcamp{
+  visibility: hidden;
+}
+
+.twitch {
+  visibility: hidden;
+}
+/* - - - -- - -- - - end of hidden objects -- - - - -- - - -- - - - - */
+
+main {
+  margin-top: 3rem;
+}
+
+.forside {
+  display: grid;
+  gap: 1rem;    
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "feed aboutband aboutband aboutband"
+  "feed selfie banner banner";
+}
+
+
+
+  .feed {
+    visibility: visible;
+    grid-area: feed;
+    width: 95%;
+    background-color: #ff819c;
+    padding: .5rem;
+    border-radius: 12px;
+}
+
+.feed h1 {
+    margin: 0;
+}
+
+.aboutband {
+  background-color: #bf5c9f;
+  border-radius: 12px;
+  grid-area: aboutband;
+  margin: 0;
+}
+
+.selfie {
+  grid-area: selfie;
+}
+
+.banner {
+  grid-area: banner;
+  padding: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: 39%;
+  padding: 0;
+  margin: 0;
+}
 
 }
 
