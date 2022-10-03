@@ -374,11 +374,13 @@ max-width: 100%;
 /* - - - COMPUTER - - - */
 @media screen and (min-width: 790px) {
 
-  /* - - - - Forside - - - - */
+  /* - - - - Hidden Objects - - - - */
 
-  
-/* Hidden Objects*/
-.albumcover {
+#menuToggle {
+  visibility: hidden;
+}
+
+  .albumcover {
   visibility: hidden;
 }
 .someh1{
@@ -401,6 +403,35 @@ max-width: 100%;
   visibility: hidden;
 }
 /* - - - -- - -- - - end of hidden objects -- - - - -- - - -- - - - - */
+
+/* - - - -- - - - - -- NAVIGATION - -- - - - - - - -*/ 
+#menu {
+  visibility: visible;
+background: #4C0060;
+padding: 2.5rem;
+border-radius: 12px;
+}
+
+#menu img {
+  height: 5%;
+  width: 10%;
+float: right;
+  clear: left;
+}
+
+#menu li {
+  display: inline-block;
+padding-right: 3.5rem;
+  list-style-type: none;
+  text-decoration: none;
+  color: #DCFF4D;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+  /* - - - - Forside - - - - */
 
 main {
   margin-top: 3rem;
@@ -456,6 +487,7 @@ text-align: center;
   width: 25%;
   border-radius: 12px;
   margin: auto;
+  margin-top: .5rem;
 }
 
   .feed {
