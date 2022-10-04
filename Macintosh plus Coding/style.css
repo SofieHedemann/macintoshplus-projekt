@@ -6,6 +6,15 @@ body {
   background-repeat: no-repeat; /*makes it not repeat itself*/
   background-attachment: fixed; /*covers the whole screen and locks itself in place*/
   background-size:cover; /*Makes the background image fit to the whole screen*/
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+p {
+  font-family: 'Palanquin', sans-serif;
 }
 
 img {
@@ -150,6 +159,10 @@ max-width: 100%;
   margin-left: 1rem;
 }
 
+#menu img {
+  visibility: hidden;
+}
+
 /*
  * And let's slide it in from the left
  */
@@ -162,38 +175,78 @@ max-width: 100%;
 
 /* - - - - - - - FORSIDE - - - - - - - -*/ 
 
+.frontbanner {
+  visibility: visible;
+  margin-top: .5rem;
+  border-radius: 12px;
+}
+
   .mobile-hide {
     display:none;
   } 
 
-
     .aboutband {
-        margin-top: 1.5rem;
+        margin-top: .5rem;
         background-color: #bf5c9f;
         border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "h1 statue"
+        "para statue";
+  }
 
     .aboutband p {
-        text-align: center;
-        padding: 0 1rem;
-        margin-top: .5rem;
+      grid-area: para;
+        padding: .5rem;
+        margin: 0;
     }
 
     .aboutband h1 {
-        margin-top: .5rem;
-        margin-bottom: .3rem;
+      grid-area: h1;
+      margin: 0;
+      padding: .5rem;
+
     }
 
     .aboutband img {
-        padding-bottom: .5rem;
-        max-width: 100vh;
-        width: 25vh;
-        max-height: 100vh;
-        height: 25vh;
+      object-fit: cover;
+      grid-row: span 3;
+      margin-bottom: .5rem;
     }
+
+
+    .aboutartist {
+      margin-top: 1rem;
+      background-color: #bf5c9f;
+      border-radius: 12px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: 
+      "statue h1"
+      "statue para";
+}
+
+  .aboutartist p {
+    grid-area: para;
+      padding: .5rem;
+      margin: 0;
+  }
+
+  .aboutartist h1 {
+    grid-area: h1;
+    margin: 0;
+    padding: .5rem;
+
+  }
+
+  .aboutartist img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-row: span 3;
+    padding-bottom: .5rem;
+  }
 
     .mobile-vek {
       display: flex;
@@ -235,10 +288,12 @@ max-width: 100%;
     .albumcover {
       display: flex;
       margin-top: 1rem;
-      background-color: #ff819c;
       border-radius: 12px;
       justify-content: center; 
-      padding-bottom: .5rem;
+    }
+
+    .albumcover img {
+      border-radius:12px;
     }
 
     .socials {
@@ -405,45 +460,57 @@ max-width: 100%;
 /* - - - -- - -- - - end of hidden objects -- - - - -- - - -- - - - - */
 
 /* - - - -- - - - - -- NAVIGATION - -- - - - - - - -*/ 
+
 #menu {
-  visibility: visible;
-background: #4C0060;
-padding: 2.5rem;
+visibility: visible;
+background: #4d006089;
+padding: 2rem;
 border-radius: 12px;
 }
 
 #menu img {
+  position: absolute;
+  right: 40px;
+  top: 70px;
   height: 5%;
   width: 10%;
-float: right;
-  clear: left;
 }
 
 #menu li {
   display: inline-block;
-padding-right: 3.5rem;
+  padding-right: 3.5rem;
   list-style-type: none;
-  text-decoration: none;
+  align-content: center;
   color: #DCFF4D;
 }
 
 #menu a {
   text-decoration: none;
+  color: #DCFF4D;
+  opacity: 100%;
 }
 
   /* - - - - Forside - - - - */
 
 main {
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.frontbanner {
+  grid-area: frontbanner;
+  visibility: visible;
+  border-radius: 12px;
 }
 
 .forside {
   display: grid;
   gap: 1rem;    
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 300px 300px;
   grid-template-areas: 
+  "feed frontbanner frontbanner frontbanner"
   "feed aboutband aboutband aboutband"
-  "feed selfie banner banner";
+  ". selfie banner banner";
 }
 
 .feed-bandcamp p {
@@ -452,8 +519,7 @@ main {
 
 .feed-tweet {
   background-color: #1DA1F2;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+border-radius: 13px;
 }
 
 .feed-tweet p {
@@ -493,7 +559,6 @@ text-align: center;
   .feed {
     visibility: visible;
     grid-area: feed;
-    width: 95%;
     background-color: #ff819c;
     padding: .5rem;
     border-radius: 12px;
@@ -504,10 +569,35 @@ text-align: center;
 }
 
 .aboutband {
+  display: grid;
   background-color: #bf5c9f;
   border-radius: 12px;
   grid-area: aboutband;
   margin: 0;
+  grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "h1 statue"
+        "para statue";
+}
+
+.aboutband p {
+  grid-area: para;
+    padding: .5rem;
+    margin: 0;
+}
+
+.aboutband h1 {
+  grid-area: h1;
+  margin: 0;
+  padding: .5rem;
+
+}
+
+.aboutband img {
+  object-fit: cover;
+  grid-row: span 3;
+  margin-bottom: .5rem;
+  height: 70%;
 }
 
 .selfie {
@@ -524,6 +614,55 @@ text-align: center;
   height: 39%;
   padding: 0;
   margin: 0;
+}
+
+/* - - - - - - - - - - - - -  DISCOGRAPHY - - - - - - - - - - - - -  */
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.albums figure {
+  background-color: #bf5c9f;
+  border-radius: 6px;
+      padding: .3rem;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.floral {
+  grid-area: 2/2/4/4;
+}
+
+.floral figcaption {
+  padding-top: .5rem;
+}
+
+/* - - - - FOOTER - - - -  */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: #DCFF4D;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #DCFF4D;
 }
 
 }
