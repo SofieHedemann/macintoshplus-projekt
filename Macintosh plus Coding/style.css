@@ -497,20 +497,8 @@ main {
 }
 
 .frontbanner {
-  grid-area: frontbanner;
   visibility: visible;
   border-radius: 12px;
-}
-
-.forside {
-  display: grid;
-  gap: 1rem;    
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 300px 300px;
-  grid-template-areas: 
-  "feed frontbanner frontbanner frontbanner"
-  "feed aboutband aboutband aboutband"
-  ". selfie banner banner";
 }
 
 .feed-bandcamp p {
@@ -558,7 +546,6 @@ text-align: center;
 
   .feed {
     visibility: visible;
-    grid-area: feed;
     background-color: #ff819c;
     padding: .5rem;
     border-radius: 12px;
@@ -568,52 +555,46 @@ text-align: center;
     margin: 0;
 }
 
+.forside {
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ gap: 1rem;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+}
+
 .aboutband {
-  display: grid;
   background-color: #bf5c9f;
   border-radius: 12px;
-  grid-area: aboutband;
-  margin: 0;
-  grid-template-columns: 2fr 1fr;
-        grid-template-areas: 
-        "h1 statue"
-        "para statue";
 }
 
-.aboutband p {
-  grid-area: para;
-    padding: .5rem;
-    margin: 0;
+.aboutartist {
+  margin: auto;
+  background-color: #bf5c9f;
+  border-radius: 12px;
 }
 
-.aboutband h1 {
-  grid-area: h1;
-  margin: 0;
-  padding: .5rem;
-
+.aboutartist img {
+padding-bottom: .5rem;
 }
 
-.aboutband img {
-  object-fit: cover;
-  grid-row: span 3;
-  margin-bottom: .5rem;
-  height: 70%;
+.section-flex {
+  display: flex;
+  gap: .5rem;
 }
 
-.selfie {
-  grid-area: selfie;
+.mobile-vek {
+  background-color: #DCFF4D;
+  width: 50%;
 }
 
-.banner {
-  grid-area: banner;
-  padding: 0;
-}
-
-.banner img {
-  width: 100%;
-  height: 39%;
-  padding: 0;
-  margin: 0;
+.giphy {
+  width: 50%;
 }
 
 /* - - - - - - - - - - - - -  DISCOGRAPHY - - - - - - - - - - - - -  */
