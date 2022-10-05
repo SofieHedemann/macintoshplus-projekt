@@ -237,7 +237,6 @@ max-width: 100%;
     grid-area: h1;
     margin: 0;
     padding: .5rem;
-
   }
 
   .aboutartist img {
@@ -501,29 +500,66 @@ main {
   border-radius: 12px;
 }
 
+.feed {
+  visibility: visible;
+  background-image: url(/img/glitch.gif);
+  border-radius: 12px; 
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feed h1 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.feed-bandcamp {
+  background-color: #dbff4d8e;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
 .feed-bandcamp p {
   text-align: center;
+  margin: 0;
+}
+
+.twittersection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .feed-tweet {
-  background-color: #1DA1F2;
-border-radius: 13px;
+  background-color: #1da0f295;
+  border-radius: 12px;
+  padding: 2px;
 }
 
 .feed-tweet p {
-margin-bottom: .5rem;
 text-align: center;
+margin: 0;
+}
+
+.feed-tweet img {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;  
 }
 
 .twitchlink {
   display: flex;
   flex-direction: column;
+  gap: 8px;
   justify-content: center;
   text-align: center;
+  background-color: #19cccf7d;
+  border-radius: 12px;
 }
 
 .twitchlink p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .twitchlink img {
@@ -538,21 +574,10 @@ text-align: center;
   color: white;
   border: 1px solid #9147FF;
   background-color: #9147FF;
-  width: 25%;
+  width: 35%;
   border-radius: 12px;
   margin: auto;
   margin-top: .5rem;
-}
-
-  .feed {
-    visibility: visible;
-    background-color: #ff819c;
-    padding: .5rem;
-    border-radius: 12px;
-}
-
-.feed h1 {
-    margin: 0;
 }
 
 .forside {
@@ -571,30 +596,87 @@ text-align: center;
 .aboutband {
   background-color: #bf5c9f;
   border-radius: 12px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+  "h1 statue"
+  "para statue";
 }
 
+.aboutband p {
+grid-area: para;
+  padding: .5rem;
+  margin: 0;
+}
+
+.aboutband h1 {
+grid-area: h1;
+margin: 0;
+padding: .5rem;
+
+}
+
+.aboutband img {
+object-fit: cover;
+grid-row: span 3;
+margin-bottom: .5rem;
+}
+
+
 .aboutartist {
-  margin: auto;
-  background-color: #bf5c9f;
-  border-radius: 12px;
+background-color: #5cbe10;
+border-radius: 12px;
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-areas: 
+"statue h1"
+"statue para";
+}
+
+.aboutartist p {
+grid-area: para;
+padding: .5rem;
+margin: 0;
+}
+
+.aboutartist h1 {
+grid-area: h1;
+margin: 0;
+padding: .5rem;
 }
 
 .aboutartist img {
-padding-bottom: .5rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  grid-row: span 3;
+  padding-bottom: .5rem;
 }
 
 .section-flex {
   display: flex;
   gap: .5rem;
+  border-radius: 12px;
 }
 
 .mobile-vek {
-  background-color: #DCFF4D;
+  background-color:#DCFF4D;
   width: 50%;
+  border-radius: 12px;
+}
+
+.mobile-vek img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.veklogo {
+  border-radius: 12px;
 }
 
 .giphy {
   width: 50%;
+  border-radius: 12px;
 }
 
 /* - - - - - - - - - - - - -  DISCOGRAPHY - - - - - - - - - - - - -  */
